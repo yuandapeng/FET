@@ -1,28 +1,29 @@
 export default [
- 
+  {
+    path: '/login',
+    name: 'loginPage',
+    component: './login/index',
+  },
   // app
   {
     path: '/',
     component: '../layouts/index',
     // Routes: ['src/pages/Authorized'],
     routes: [
-      { path: '/', redirect: '/home/index' },
+      { path: '/', redirect: '/dashboard' },
       {
         
-          path:"/login",
-          name:"login",
-          icon:"table",
-          routes:[{
-            path: '/login/index',
-            name: 'loginPage',
-            component: './login',
-          },]
+          path:"/dashboard",
+          name:"dashboard",
+          icon:"dashboard",
+          component:'./dashboard/index'
       },
       {
         path: '/home',
         name: 'home',
-        icon: 'dashboard',
+        icon: 'home',
         routes: [
+          { path: '/home', redirect: '/home/index' },
           {
             path: '/home/index',
             name: 'home',

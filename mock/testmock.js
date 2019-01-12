@@ -1,10 +1,4 @@
-const arry={
-    status:200,
-    code:200,
-    result:{
 
-    }
-}
 
 const status={
     status:200
@@ -49,7 +43,6 @@ export default {
         })
       },
       "POST /api/login": (req,res)=> {
-        const {method}=req;
         res.json({
             ...status,
             result:{

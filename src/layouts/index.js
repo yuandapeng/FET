@@ -4,6 +4,9 @@ import React from "react";
 import { Layout, Menu, Icon } from 'antd';
 import { connect } from 'dva';
 import SideMenu from "./SideMenu";
+import UserSetting from "./user";
+
+
 
 const { Header, Sider, Content } = Layout;
 
@@ -71,6 +74,9 @@ const { Header, Sider, Content } = Layout;
               type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
               onClick={this.onCollapse}
             />
+            <div style={{float:"right",marginRight:15}}>
+              <UserSetting></UserSetting>
+              </div>
           </Header>
           <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
             {children}
